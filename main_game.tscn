@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://bmwwj4j85i7ps"]
+
+[ext_resource type="PackedScene" uid="uid://bd8k6onda0br0" path="res://players_field.tscn" id="1_1oj5k"]
+[ext_resource type="PackedScene" uid="uid://6orrq3d21rx0" path="res://main_menu.tscn" id="2_yx7mw"]
+[ext_resource type="PackedScene" uid="uid://wfgup3jnn12y" path="res://settings_menu.tscn" id="3_ykeeq"]
+
+[node name="MainGame" type="Node2D" unique_id=1241152307]
+
+[node name="PlayersField" parent="." unique_id=1976571519 instance=ExtResource("1_1oj5k")]
+
+[node name="PlayersField2" parent="." unique_id=1580098474 instance=ExtResource("1_1oj5k")]
+
+[node name="MainMenu" parent="." unique_id=848787847 instance=ExtResource("2_yx7mw")]
+
+[node name="SettingsMenu" parent="." unique_id=325776555 instance=ExtResource("3_ykeeq")]
+visible = false
+position = Vector2(716, 318)

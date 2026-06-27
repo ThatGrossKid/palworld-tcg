@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://cojbj41r3vwrr"]
+
+[node name="EventCard" type="Node2D" unique_id=786022918]
+
+[node name="CardImage" type="TextureRect" parent="." unique_id=258358091]
+offset_right = 40.0
+offset_bottom = 40.0
