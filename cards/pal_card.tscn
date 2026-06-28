@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://74i73wbgvvte"]
 
-[ext_resource type="Script" uid="uid://cccsquxvtv4v3" path="res://palcard.gd" id="1_nlni0"]
+[ext_resource type="Script" uid="uid://cccsquxvtv4v3" path="res://cards/palcard.gd" id="1_nlni0"]
 
 [node name="PalCard" type="Node2D" unique_id=374839458]
 script = ExtResource("1_nlni0")

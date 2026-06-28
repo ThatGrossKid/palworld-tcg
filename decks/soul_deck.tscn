@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b88mxi5ggbesn"]
 
-[ext_resource type="Script" uid="uid://b7gry6lxh1qbx" path="res://soul_deck.gd" id="1_u2yhh"]
+[ext_resource type="Script" uid="uid://b7gry6lxh1qbx" path="res://decks/soul_deck.gd" id="1_u2yhh"]
 
 [node name="SoulDeck" type="Node2D" unique_id=895344358]
 script = ExtResource("1_u2yhh")

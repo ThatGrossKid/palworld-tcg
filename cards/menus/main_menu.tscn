@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://6orrq3d21rx0"]
 
-[ext_resource type="Texture2D" uid="uid://poj7sjumntmy" path="res://palworld_start_image.png" id="1_06t4h"]
-[ext_resource type="Script" uid="uid://dffpftxiexavn" path="res://main_menu.gd" id="1_7vrkn"]
+[ext_resource type="Texture2D" uid="uid://poj7sjumntmy" path="res://assets/palworld_start_image.png" id="1_06t4h"]
+[ext_resource type="Script" uid="uid://dffpftxiexavn" path="res://cards/menus/main_menu.gd" id="1_7vrkn"]
 
 [node name="MainMenu" type="Node2D" unique_id=848787847]
 script = ExtResource("1_7vrkn")

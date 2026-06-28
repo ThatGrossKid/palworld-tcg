@@ -22,7 +22,7 @@ func _handle_tutorial_button() -> void:
 	pass
 	
 func _handle_settings_button() -> void:
-	settings_button_clicked.emit()
+	EventBus.request_settings_menu()
 	
 func _handle_exit_button() -> void:
 	get_tree().quit()

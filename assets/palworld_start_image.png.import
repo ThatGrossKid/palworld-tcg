@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://poj7sjumntmy"
-path="res://.godot/imported/palworld_start_image.png-b43f4056d2c1552e12bbb92fe12a11d3.ctex"
+path="res://.godot/imported/palworld_start_image.png-2796ea8c93c2d77fd1d59d980463f845.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://palworld_start_image.png"
-dest_files=["res://.godot/imported/palworld_start_image.png-b43f4056d2c1552e12bbb92fe12a11d3.ctex"]
+source_file="res://assets/palworld_start_image.png"
+dest_files=["res://.godot/imported/palworld_start_image.png-2796ea8c93c2d77fd1d59d980463f845.ctex"]
 
 [params]
 

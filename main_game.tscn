@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://bmwwj4j85i7ps"]
 
 [ext_resource type="PackedScene" uid="uid://bd8k6onda0br0" path="res://players_field.tscn" id="1_1oj5k"]
-[ext_resource type="PackedScene" uid="uid://6orrq3d21rx0" path="res://main_menu.tscn" id="2_yx7mw"]
-[ext_resource type="PackedScene" uid="uid://wfgup3jnn12y" path="res://settings_menu.tscn" id="3_ykeeq"]
+[ext_resource type="PackedScene" uid="uid://6orrq3d21rx0" path="res://cards/menus/main_menu.tscn" id="2_yx7mw"]
+[ext_resource type="PackedScene" uid="uid://wfgup3jnn12y" path="res://cards/menus/settings_menu.tscn" id="3_ykeeq"]
 
 [node name="MainGame" type="Node2D" unique_id=1241152307]
 
