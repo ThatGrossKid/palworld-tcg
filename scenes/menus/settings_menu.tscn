@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://wfgup3jnn12y"]
 
-[ext_resource type="Script" uid="uid://cyky7aoibx1jg" path="res://cards/menus/settings_menu.gd" id="1_0cmel"]
+[ext_resource type="Script" uid="uid://cyky7aoibx1jg" path="res://scenes/menus/settings_menu.gd" id="1_0cmel"]
 [ext_resource type="PackedScene" uid="uid://c45xs6yq7yahr" path="res://addons/smart_graphics_settings/adaptive_graphics_ui.tscn" id="1_ufg0w"]
 
 [node name="SettingsMenu" type="Node2D" unique_id=325776555]

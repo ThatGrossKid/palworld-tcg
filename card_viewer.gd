@@ -5,7 +5,7 @@ var cards_by_number: Dictionary = {}
 
 func _ready() -> void:
 	# Load card data
-	var file = FileAccess.open("res://cards.json", FileAccess.READ)
+	var file = FileAccess.open("res://cards/cards.json", FileAccess.READ)
 	var json = JSON.new()
 	json.parse(file.get_as_text())
 	cards = json.get_data()
@@ -16,7 +16,7 @@ func _ready() -> void:
 
 	# Display first 6 cards
 	var card_numbers = ["ETD01-001", "ETD01-002", "ETD01-003", "ETD01-004", "ETD01-005", "ETD01-006"]
-	var card_scene = load("res://pal_card.tscn") as PackedScene
+	var card_scene = load("res://cards/pal_card.tscn") as PackedScene
 
 	# Scale to fit 6 cards across 1920 width with some padding
 	var card_scale = 0.15  # 1118 * 0.15 ≈ 168px wide

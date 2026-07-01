@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://qlp2s0trjwra"]
+
+[ext_resource type="Script" uid="uid://cjspwybqr7j7v" path="res://scenes/menus/play_menu.gd" id="1_3pot6"]
+[ext_resource type="Texture2D" uid="uid://bflpgo0hjo1o3" path="res://assets/palworld_solo_menu_button.png" id="2_worbj"]
+[ext_resource type="Texture2D" uid="uid://b3yj1rpwfdwgt" path="res://assets/palworld_pvpbutton.png" id="3_jpncu"]
+
+[node name="PlayMenu" type="Node2D" unique_id=1360819099]
+script = ExtResource("1_3pot6")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1648772495]
+offset_right = 2199.0
+offset_bottom = 1120.0
+
+[node name="Button" type="Button" parent="HBoxContainer" unique_id=1031666225]
+layout_mode = 2
+icon = ExtResource("2_worbj")
+
+[node name="Button2" type="Button" parent="HBoxContainer" unique_id=1731820298]
+layout_mode = 2
+icon = ExtResource("3_jpncu")

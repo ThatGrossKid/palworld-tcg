@@ -1,7 +1,5 @@
 extends Node2D
 
-signal settings_button_clicked
-
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	$VBoxContainer/PlayButton.connect("button_up",_handle_play_button)
