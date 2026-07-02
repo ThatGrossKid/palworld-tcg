@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://bvo2ohkxpevcf"]
+
+[ext_resource type="Texture2D" uid="uid://bux7e7arwsy35" path="res://textures/CardSlot.png" id="1_2jwxh"]
+[ext_resource type="Script" uid="uid://tqxuw2hxk3e7" path="res://graveyard.gd" id="1_siodt"]
+
+[node name="Graveyard" type="Node2D" unique_id=933783972]
+script = ExtResource("1_siodt")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=769038881]
+scale = Vector2(1.8, 1.8)
+texture = ExtResource("1_2jwxh")
+
+[node name="Label" type="Label" parent="." unique_id=1675759721]
+offset_left = -116.0
+offset_top = -30.0
+offset_right = 117.0
+offset_bottom = 28.0
+theme_override_font_sizes/font_size = 42
+text = "GRAVEYARD"
+horizontal_alignment = 1

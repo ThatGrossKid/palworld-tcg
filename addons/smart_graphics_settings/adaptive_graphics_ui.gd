@@ -19,6 +19,7 @@ var adaptive_graphics: AdaptiveGraphics
 @onready var fps_label: Label = $CenterContainer/PanelContainer/MarginContainer/VBoxContent/FPSLabel
 @onready var status_label: Label = $CenterContainer/PanelContainer/MarginContainer/VBoxContent/StatusLabel
 @onready var renderer_label: Label = $CenterContainer/PanelContainer/MarginContainer/VBoxContent/RendererLabel
+@onready var close_button:Button = $CenterContainer/PanelContainer/MarginContainer/VBoxContent/CloseButton
 
 ## Default target FPS value
 var default_target_fps: int = 60
@@ -37,10 +38,14 @@ const COLOR_WARN = Color(1.0, 1.0, 0.2)
 const COLOR_BAD = Color(1.0, 0.2, 0.2)
 
 func _ready() -> void:
+	close_button.connect("button_up",_close_settings)
 	if SmartGraphicsSettings.get_adaptive_graphics():
 		_on_adaptive_graphics_ready()
 	else:
 		SmartGraphicsSettings.initialized.connect(_on_adaptive_graphics_ready)
+
+func _close_settings()->void:
+	EventBus.request_close_settings_menu()
 
 func _on_adaptive_graphics_ready() -> void:
 	adaptive_graphics = SmartGraphicsSettings.get_adaptive_graphics()

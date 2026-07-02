@@ -1,6 +1,45 @@
 [gd_scene format=3 uid="uid://b88mxi5ggbesn"]
 
 [ext_resource type="Script" uid="uid://b7gry6lxh1qbx" path="res://decks/soul_deck.gd" id="1_u2yhh"]
+[ext_resource type="Texture2D" uid="uid://bnnf7leqmlc4r" path="res://textures/preview.webp" id="2_rtgec"]
 
 [node name="SoulDeck" type="Node2D" unique_id=895344358]
 script = ExtResource("1_u2yhh")
+
+[node name="DeckImage" type="Sprite2D" parent="." unique_id=1419796502]
+texture = ExtResource("2_rtgec")
+
+[node name="DeckToolTip" type="HBoxContainer" parent="." unique_id=2132723377]
+offset_right = 84.0
+offset_bottom = 104.0
+
+[node name="ToolTipLabel" type="VBoxContainer" parent="DeckToolTip" unique_id=344313864]
+layout_mode = 2
+
+[node name="NumCards" type="Label" parent="DeckToolTip/ToolTipLabel" unique_id=707828652]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="DeckToolTip/ToolTipLabel" unique_id=484159387]
+layout_mode = 2
+text = "# of Cards"
+
+[node name="Label3" type="Label" parent="DeckToolTip/ToolTipLabel" unique_id=465716617]
+layout_mode = 2
+
+[node name="Label4" type="Label" parent="DeckToolTip/ToolTipLabel" unique_id=1822673507]
+layout_mode = 2
+
+[node name="ToolTipData" type="VBoxContainer" parent="DeckToolTip" unique_id=875006687]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="DeckToolTip/ToolTipData" unique_id=192040121]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="DeckToolTip/ToolTipData" unique_id=326172150]
+layout_mode = 2
+
+[node name="Label3" type="Label" parent="DeckToolTip/ToolTipData" unique_id=878180120]
+layout_mode = 2
+
+[node name="Label4" type="Label" parent="DeckToolTip/ToolTipData" unique_id=681135002]
+layout_mode = 2

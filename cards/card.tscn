@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://dkmb1gu7e1qpl"]
+
+[ext_resource type="Texture2D" uid="uid://cix6befpf0vsq" path="res://textures/cards/ESOUL-001.png" id="1_ivai2"]
+[ext_resource type="Script" uid="uid://dweqbrgqkdye3" path="res://cards/card_logic.gd" id="2_nwofj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_re505"]
+size = Vector2(1120, 1570)
+
+[node name="Card" type="Sprite2D" unique_id=2139617183]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_ivai2")
+script = ExtResource("2_nwofj")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=910904382]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=762388727]
+position = Vector2(5.7220448e-05, 3.8146965e-05)
+scale = Vector2(0.9999998, 0.9999998)
+shape = SubResource("RectangleShape2D_re505")
+
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]

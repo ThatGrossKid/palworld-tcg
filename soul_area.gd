@@ -1,7 +1,6 @@
-extends MainDeck
-class_name SoulDeck
+extends Node2D
 
-var cards_in_deck = 10
+@export var num_of_souls = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -12,5 +11,8 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
-func shuffle()-> void:
-	pass
+
+func add_soul(soul_card)-> void:
+	if num_of_souls < 10:
+		soul_card.position = self.get_child(num_of_souls).position
+		num_of_souls +=1

@@ -1,4 +1,5 @@
 extends Card
+class_name PalCard
 
 var lucky:bool = false
 var cost:int = 0

@@ -11,13 +11,14 @@ func _exit_tree() -> void:
 	pass
 
 func _handle_play_button() -> void:
-	pass
+	EventBus.request_play_game()
+	self.visible = false
 	
 func _handle_duelroom_button() -> void:
-	pass
+	EventBus.request_duel_rooms()
 	
 func _handle_tutorial_button() -> void:
-	pass
+	EventBus.request_tutorial()
 	
 func _handle_settings_button() -> void:
 	EventBus.request_settings_menu()

@@ -4,17 +4,40 @@
 [ext_resource type="Texture2D" uid="uid://bflpgo0hjo1o3" path="res://assets/palworld_solo_menu_button.png" id="2_worbj"]
 [ext_resource type="Texture2D" uid="uid://b3yj1rpwfdwgt" path="res://assets/palworld_pvpbutton.png" id="3_jpncu"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3pot6"]
+size = Vector2(1104.9998, 1115)
+
 [node name="PlayMenu" type="Node2D" unique_id=1360819099]
 script = ExtResource("1_3pot6")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1648772495]
-offset_right = 2199.0
-offset_bottom = 1120.0
+[node name="SoloButton" type="Sprite2D" parent="." unique_id=1777462249]
+position = Vector2(595, 501.99997)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("2_worbj")
 
-[node name="Button" type="Button" parent="HBoxContainer" unique_id=1031666225]
-layout_mode = 2
-icon = ExtResource("2_worbj")
+[node name="SoloAreaButton" type="Area2D" parent="SoloButton" unique_id=1475772453]
+position = Vector2(429, 344)
 
-[node name="Button2" type="Button" parent="HBoxContainer" unique_id=1731820298]
-layout_mode = 2
-icon = ExtResource("3_jpncu")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SoloButton/SoloAreaButton" unique_id=387393531]
+position = Vector2(-426.49994, -353.99994)
+shape = SubResource("RectangleShape2D_3pot6")
+
+[node name="PvPButton" type="Sprite2D" parent="." unique_id=268364061]
+position = Vector2(1247, 503.99997)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("3_jpncu")
+
+[node name="PVPAreaButton" type="Area2D" parent="PvPButton" unique_id=41447599]
+position = Vector2(1123, 348)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PvPButton/PVPAreaButton" unique_id=210308523]
+position = Vector2(-1127.9996, -350.49988)
+scale = Vector2(0.9999998, 0.9999998)
+shape = SubResource("RectangleShape2D_3pot6")
+
+[connection signal="tree_exited" from="SoloButton" to="." method="_on_solo_button_tree_exited"]
+[connection signal="mouse_entered" from="SoloButton/SoloAreaButton" to="." method="_on_solo_area_button_mouse_entered"]
+[connection signal="mouse_exited" from="SoloButton/SoloAreaButton" to="." method="_on_solo_area_button_mouse_exited"]
+[connection signal="tree_exited" from="PvPButton" to="." method="_on_pv_p_button_tree_exited"]
+[connection signal="mouse_entered" from="PvPButton/PVPAreaButton" to="." method="_on_pvp_area_button_mouse_entered"]
+[connection signal="mouse_exited" from="PvPButton/PVPAreaButton" to="." method="_on_pvp_area_button_mouse_exited"]

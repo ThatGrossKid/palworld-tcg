@@ -1,10 +1,9 @@
 [gd_scene format=3 uid="uid://b4tmn6qfy7ipn"]
 
 [ext_resource type="Script" uid="uid://b6oakgmp4r8t7" path="res://cards/soul_card.gd" id="1_r7odk"]
+[ext_resource type="PackedScene" uid="uid://dkmb1gu7e1qpl" path="res://cards/card.tscn" id="2_2uhvk"]
 
 [node name="SoulCard" type="Node2D" unique_id=2107691248]
 script = ExtResource("1_r7odk")
 
-[node name="CardImage" type="TextureRect" parent="." unique_id=1906515618]
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="Card" parent="." unique_id=2139617183 instance=ExtResource("2_2uhvk")]

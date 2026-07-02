@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://cxhtjlru6q2u"]
+
+[ext_resource type="Script" uid="uid://g3h00jyhs04j" path="res://soul_area.gd" id="1_y64ck"]
+[ext_resource type="Texture2D" uid="uid://bux7e7arwsy35" path="res://textures/CardSlot.png" id="2_h8bss"]
+
+[node name="SoulArea" type="Node2D" unique_id=1326195384]
+script = ExtResource("1_y64ck")
+
+[node name="SoulPos1" type="Sprite2D" parent="." unique_id=1561112924]
+position = Vector2(94, 434)
+texture = ExtResource("2_h8bss")
+
+[node name="SoulPos2" type="Sprite2D" parent="." unique_id=1627204629]
+position = Vector2(294, 436)
+texture = ExtResource("2_h8bss")
+
+[node name="SoulPos3" type="Sprite2D" parent="." unique_id=1813730339]
+position = Vector2(494, 436)
+texture = ExtResource("2_h8bss")
+
+[node name="SoulPos4" type="Sprite2D" parent="." unique_id=2097883061]
+position = Vector2(688, 436)
+texture = ExtResource("2_h8bss")
+
+[node name="SoulPos5" type="Sprite2D" parent="." unique_id=431416712]
+position = Vector2(886, 438)
+texture = ExtResource("2_h8bss")
+
+[node name="SoulPos6" type="Sprite2D" parent="." unique_id=1607936864]
+position = Vector2(1082, 438)
+texture = ExtResource("2_h8bss")
+
+[node name="SoulPos7" type="Sprite2D" parent="." unique_id=2087825444]
+position = Vector2(1276, 438)
+texture = ExtResource("2_h8bss")
+
+[node name="SoulPos8" type="Sprite2D" parent="." unique_id=1392765149]
+position = Vector2(1472, 436)
+texture = ExtResource("2_h8bss")
+
+[node name="SoulPos9" type="Sprite2D" parent="." unique_id=1232672643]
+position = Vector2(1676, 434)
+texture = ExtResource("2_h8bss")
+
+[node name="SoulPos10" type="Sprite2D" parent="." unique_id=1194719424]
+position = Vector2(1876, 432)
+texture = ExtResource("2_h8bss")

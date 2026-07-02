@@ -1,17 +1,17 @@
 [gd_scene format=3 uid="uid://dj2ev57vhofjm"]
 
 [ext_resource type="Script" uid="uid://5cux6i7namiu" path="res://decks/main_deck.gd" id="1_i1yfj"]
+[ext_resource type="Texture2D" uid="uid://bnnf7leqmlc4r" path="res://textures/preview.webp" id="2_ipc68"]
 
 [node name="MainDeck" type="Node2D" unique_id=101529554]
 script = ExtResource("1_i1yfj")
 
-[node name="DeckTexture" type="TextureRect" parent="." unique_id=2080894419]
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="DeckImage" type="Sprite2D" parent="." unique_id=337439050]
+texture = ExtResource("2_ipc68")
 
 [node name="DeckToolTip" type="HBoxContainer" parent="." unique_id=1636603388]
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 84.0
+offset_bottom = 104.0
 
 [node name="ToolTipLabel" type="VBoxContainer" parent="DeckToolTip" unique_id=830848758]
 layout_mode = 2

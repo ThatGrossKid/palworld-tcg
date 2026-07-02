@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://c7rykagnjvotb"]
 
+[ext_resource type="PackedScene" uid="uid://dkmb1gu7e1qpl" path="res://cards/card.tscn" id="1_qmfmq"]
+
 [node name="GearCard" type="Node2D" unique_id=1495561148]
 
-[node name="CardImage" type="TextureRect" parent="." unique_id=1921818648]
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="Card" parent="." unique_id=2139617183 instance=ExtResource("1_qmfmq")]
