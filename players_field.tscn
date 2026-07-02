@@ -1,9 +1,36 @@
 [gd_scene format=3 uid="uid://bd8k6onda0br0"]
 
 [ext_resource type="Script" uid="uid://bdtxgflomsbkg" path="res://players_field.gd" id="1_v01cv"]
+[ext_resource type="Texture2D" uid="uid://do8s2m8ub3j8h" path="res://textures/palworld_mat.png" id="2_ivc8e"]
 [ext_resource type="PackedScene" uid="uid://c405blq8r00v5" path="res://card_manager.tscn" id="2_ny3hx"]
+[ext_resource type="PackedScene" uid="uid://cxhtjlru6q2u" path="res://soul_area.tscn" id="4_e4mvh"]
+[ext_resource type="PackedScene" uid="uid://b88mxi5ggbesn" path="res://decks/soul_deck.tscn" id="5_ct4a6"]
+[ext_resource type="PackedScene" uid="uid://dj2ev57vhofjm" path="res://decks/main_deck.tscn" id="6_lh7wx"]
+[ext_resource type="PackedScene" uid="uid://bvo2ohkxpevcf" path="res://graveyard.tscn" id="7_gy3u7"]
+[ext_resource type="PackedScene" uid="uid://dan0g6u613qob" path="res://exile_zone.tscn" id="8_lh7wx"]
 
 [node name="PlayersField" type="Node2D" unique_id=1976571519]
 script = ExtResource("1_v01cv")
 
+[node name="TextureRect" type="TextureRect" parent="." unique_id=839493656]
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("2_ivc8e")
+expand_mode = 1
+
 [node name="CardManager" parent="." unique_id=914953250 instance=ExtResource("2_ny3hx")]
+
+[node name="SoulArea" parent="." unique_id=1326195384 instance=ExtResource("4_e4mvh")]
+position = Vector2(378, 507)
+
+[node name="SoulDeck" parent="." unique_id=895344358 instance=ExtResource("5_ct4a6")]
+position = Vector2(184, 937)
+
+[node name="MainDeck" parent="." unique_id=101529554 instance=ExtResource("6_lh7wx")]
+position = Vector2(1672, 507)
+
+[node name="Graveyard" parent="." unique_id=933783972 instance=ExtResource("7_gy3u7")]
+position = Vector2(1736, 922)
+
+[node name="ExileZone" parent="." unique_id=666065622 instance=ExtResource("8_lh7wx")]
+position = Vector2(1590, 176)

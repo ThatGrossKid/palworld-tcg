@@ -7,7 +7,7 @@
 script = ExtResource("1_72vjt")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1867206513]
-scale = Vector2(1.8, 1.8)
+scale = Vector2(1.2, 1.2)
 texture = ExtResource("1_a3eht")
 
 [node name="Label" type="Label" parent="." unique_id=1790407049]
@@ -15,6 +15,6 @@ offset_left = -116.0
 offset_top = -30.0
 offset_right = 117.0
 offset_bottom = 28.0
-theme_override_font_sizes/font_size = 42
+theme_override_font_sizes/font_size = 32
 text = "EXILE ZONE"
 horizontal_alignment = 1

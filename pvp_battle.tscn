@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://7eqm2fxyvwex"]
+
+[ext_resource type="PackedScene" uid="uid://bd8k6onda0br0" path="res://players_field.tscn" id="1_wqw7y"]
+
+[node name="PVPBattle" type="Node2D" unique_id=1014885011]
+
+[node name="OpponentField" parent="." unique_id=1976571519 instance=ExtResource("1_wqw7y")]
+position = Vector2(1917, 0)
+rotation = 3.1415927
+
+[node name="PlayersField" parent="." unique_id=1397148193 instance=ExtResource("1_wqw7y")]
