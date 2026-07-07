@@ -1,0 +1,135 @@
+[gd_scene format=3 uid="uid://b5b5a2thwrv55"]
+
+[ext_resource type="Script" uid="uid://b2e130tgda38k" path="res://scenes/ui/create_lobby_dialog.gd" id="1_h5hae"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_elrxt"]
+bg_color = Color(0.12941177, 0.12941177, 0.12941177, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="LabelSettings" id="LabelSettings_yb4fe"]
+font_size = 48
+
+[sub_resource type="LabelSettings" id="LabelSettings_nq8i0"]
+font_size = 24
+
+[sub_resource type="LabelSettings" id="LabelSettings_elrxt"]
+font_size = 24
+
+[node name="CreateLobbyDialog" type="Control" unique_id=340314324]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_h5hae")
+
+[node name="Backdrop" type="ColorRect" parent="." unique_id=1954885677]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.07058824, 0.07058824, 0.07058824, 0.39215687)
+
+[node name="Panel" type="PanelContainer" parent="." unique_id=1888404689]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.37600002
+anchor_top = 0.36400002
+anchor_right = 0.624
+anchor_bottom = 0.63600004
+offset_left = 176.07996
+offset_top = 63.379974
+offset_right = -176.08008
+offset_bottom = -63.380066
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_elrxt")
+
+[node name="Padding" type="MarginContainer" parent="Panel" unique_id=371678369]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/Padding" unique_id=513781488]
+layout_mode = 2
+
+[node name="TitleLabel" type="Label" parent="Panel/Padding/VBoxContainer" unique_id=1225329685]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Create Lobby"
+label_settings = SubResource("LabelSettings_yb4fe")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Separator1" type="HSeparator" parent="Panel/Padding/VBoxContainer" unique_id=1432266289]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Settings" type="VBoxContainer" parent="Panel/Padding/VBoxContainer" unique_id=1251426910]
+layout_mode = 2
+theme_override_constants/separation = 7
+alignment = 1
+
+[node name="MaxPlayersLabel" type="Label" parent="Panel/Padding/VBoxContainer/Settings" unique_id=954524599]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Max Players"
+label_settings = SubResource("LabelSettings_nq8i0")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MaxPlayersSlider" type="HSlider" parent="Panel/Padding/VBoxContainer/Settings" unique_id=2142677628]
+unique_name_in_owner = true
+layout_mode = 2
+min_value = 2.0
+max_value = 8.0
+value = 2.0
+
+[node name="MaxPlayersValue" type="Label" parent="Panel/Padding/VBoxContainer/Settings" unique_id=1345142882]
+unique_name_in_owner = true
+layout_mode = 2
+label_settings = SubResource("LabelSettings_elrxt")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Separator2" type="HSeparator" parent="Panel/Padding/VBoxContainer" unique_id=1074264358]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Buttons" type="HBoxContainer" parent="Panel/Padding/VBoxContainer" unique_id=38906251]
+layout_mode = 2
+theme_override_constants/separation = 35
+alignment = 1
+
+[node name="CancelButton" type="Button" parent="Panel/Padding/VBoxContainer/Buttons" unique_id=1472600514]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Cancel"
+
+[node name="CreateButton" type="Button" parent="Panel/Padding/VBoxContainer/Buttons" unique_id=1024039352]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Create"
+
+[node name="ErrorLabel" type="Label" parent="Panel/Padding/VBoxContainer" unique_id=1367277403]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+
+[connection signal="gui_input" from="Backdrop" to="." method="_on_backdrop_input"]
+[connection signal="value_changed" from="Panel/Padding/VBoxContainer/Settings/MaxPlayersSlider" to="." method="_on_max_players_slider_value_changed"]
+[connection signal="pressed" from="Panel/Padding/VBoxContainer/Buttons/CancelButton" to="." method="_on_cancel_button_pressed"]
+[connection signal="pressed" from="Panel/Padding/VBoxContainer/Buttons/CreateButton" to="." method="_on_create_button_pressed"]

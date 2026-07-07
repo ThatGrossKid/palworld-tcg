@@ -2,13 +2,16 @@ extends Node2D
 class_name PlayersHand
 
 const HAND_COUNT = 2
-const CARD_SCENE_PATH = "res://cards/pal_card.tscn"
+const PAL_CARD_SCENE_PATH = "res://cards/pal_card.tscn"
+const GEAR_CARD_SCENE_PATH = "res://cards/gear_card.tscn"
+const EVENT_CARD_SCENE_PATH = "res://cards/event_card.tscn"
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	var card_scene = preload(CARD_SCENE_PATH)
-	for i in range(HAND_COUNT):
-		var new_card = card_scene.instantiate()
-		$"../CardManager".add_child(new_card)
+	pass
+	#var card_scene = preload(CARD_SCENE_PATH)
+	#for i in range(HAND_COUNT):
+	#	var new_card = card_scene.instantiate()
+	#	$"../CardManager".add_child(new_card)
 		
 
 

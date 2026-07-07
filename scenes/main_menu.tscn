@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://cslivfpogas1i"]
+
+[ext_resource type="Script" uid="uid://cpnp4508vsy5t" path="res://scenes/main_menu.gd" id="1_l6cm7"]
+
+[node name="MainMenu" type="Control" unique_id=1065153000]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_l6cm7")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=2114163102]
+custom_minimum_size = Vector2(350, 0)
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="TitleLabel" type="Label" parent="VBoxContainer" unique_id=368038304]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="StatusLabel" type="Label" parent="VBoxContainer" unique_id=206106837]
+unique_name_in_owner = true
+layout_mode = 2
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="UsernameInput" type="LineEdit" parent="VBoxContainer" unique_id=321233317]
+unique_name_in_owner = true
+layout_mode = 2
+placeholder_text = "Username"
+alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="VBoxContainer" unique_id=1961270473]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="CreateLobbyButton" type="Button" parent="VBoxContainer" unique_id=356974771]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Create"
+
+[node name="JoinLobbyButton" type="Button" parent="VBoxContainer" unique_id=1167273570]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Join"
+
+[node name="ErrorLabel" type="Label" parent="VBoxContainer" unique_id=976032035]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=258628120]
+layout_mode = 2
+
+[connection signal="pressed" from="VBoxContainer/CreateLobbyButton" to="." method="_on_create_lobby_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/JoinLobbyButton" to="." method="_on_join_lobby_button_pressed"]

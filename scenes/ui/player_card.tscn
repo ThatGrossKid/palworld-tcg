@@ -1,0 +1,75 @@
+[gd_scene format=3 uid="uid://cjoaq3tae3o6j"]
+
+[ext_resource type="Script" uid="uid://dg7lq6mqqw30c" path="res://scenes/ui/player_card.gd" id="1_qepfl"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8r7dr"]
+bg_color = Color(0.1882353, 0.1882353, 0.1882353, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="LabelSettings" id="LabelSettings_ssmr3"]
+font_size = 24
+
+[node name="PlayerCard" type="PanelContainer" unique_id=536185465]
+custom_minimum_size = Vector2(400, 90)
+anchors_preset = -1
+anchor_right = 0.18200001
+anchor_bottom = 0.046000004
+offset_right = -309.44003
+offset_bottom = -9.680004
+theme_override_styles/panel = SubResource("StyleBoxFlat_8r7dr")
+script = ExtResource("1_qepfl")
+
+[node name="Padding" type="MarginContainer" parent="." unique_id=1068433869]
+layout_mode = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Padding" unique_id=1347692466]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Padding/HBoxContainer" unique_id=170342964]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="UsernameLabel" type="Label" parent="Padding/HBoxContainer/HBoxContainer" unique_id=1624427618]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Empty Slot"
+label_settings = SubResource("LabelSettings_ssmr3")
+
+[node name="Buttons" type="VBoxContainer" parent="Padding/HBoxContainer" unique_id=1869681932]
+layout_mode = 2
+alignment = 1
+
+[node name="MakeHostButton" type="Button" parent="Padding/HBoxContainer/Buttons" unique_id=2098922032]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(125, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "Transfer Host"
+
+[node name="VBoxContainer" type="HBoxContainer" parent="Padding/HBoxContainer/Buttons" unique_id=118056511]
+layout_mode = 2
+alignment = 1
+
+[node name="KickButton" type="Button" parent="Padding/HBoxContainer/Buttons/VBoxContainer" unique_id=1585738955]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Kick"
+
+[node name="BanButton" type="Button" parent="Padding/HBoxContainer/Buttons/VBoxContainer" unique_id=360997369]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Ban"
+
+[connection signal="pressed" from="Padding/HBoxContainer/Buttons/MakeHostButton" to="." method="_on_make_host_button_pressed"]
+[connection signal="pressed" from="Padding/HBoxContainer/Buttons/VBoxContainer/KickButton" to="." method="_on_kick_button_pressed"]
+[connection signal="pressed" from="Padding/HBoxContainer/Buttons/VBoxContainer/BanButton" to="." method="_on_ban_button_pressed"]

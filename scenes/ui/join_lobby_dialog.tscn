@@ -1,0 +1,125 @@
+[gd_scene format=3 uid="uid://dhlpcnfudohtb"]
+
+[ext_resource type="Script" uid="uid://gbilxhsjfxcl" path="res://scenes/ui/join_lobby_dialog.gd" id="1_mjjia"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sg1mo"]
+bg_color = Color(0.12941177, 0.12941177, 0.12941177, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="LabelSettings" id="LabelSettings_xvbfa"]
+font_size = 48
+
+[sub_resource type="LabelSettings" id="LabelSettings_p16hu"]
+font_size = 24
+
+[node name="JoinLobbyDialog" type="Control" unique_id=49643654]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_mjjia")
+
+[node name="Backdrop" type="ColorRect" parent="." unique_id=1072719740]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.07058824, 0.07058824, 0.07058824, 0.39215687)
+
+[node name="Panel" type="PanelContainer" parent="." unique_id=177228265]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.402
+anchor_top = 0.374
+anchor_right = 0.59800005
+anchor_bottom = 0.62600005
+offset_left = 168.15997
+offset_top = 116.07999
+offset_right = -168.16016
+offset_bottom = -116.08008
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_sg1mo")
+
+[node name="Padding" type="MarginContainer" parent="Panel" unique_id=1955146688]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/Padding" unique_id=649753376]
+layout_mode = 2
+
+[node name="TitleLabel" type="Label" parent="Panel/Padding/VBoxContainer" unique_id=1826045183]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Join Lobby"
+label_settings = SubResource("LabelSettings_xvbfa")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Separator1" type="HSeparator" parent="Panel/Padding/VBoxContainer" unique_id=2007073272]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Settings" type="VBoxContainer" parent="Panel/Padding/VBoxContainer" unique_id=8294468]
+layout_mode = 2
+theme_override_constants/separation = 7
+alignment = 1
+
+[node name="LobbyCodeLabel" type="Label" parent="Panel/Padding/VBoxContainer/Settings" unique_id=1123530895]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Lobby Code"
+label_settings = SubResource("LabelSettings_p16hu")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LobbyCodeInput" type="LineEdit" parent="Panel/Padding/VBoxContainer/Settings" unique_id=110531385]
+unique_name_in_owner = true
+layout_mode = 2
+placeholder_text = "xxxx"
+alignment = 1
+
+[node name="Separator2" type="HSeparator" parent="Panel/Padding/VBoxContainer" unique_id=1350985758]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Buttons" type="HBoxContainer" parent="Panel/Padding/VBoxContainer" unique_id=407827550]
+layout_mode = 2
+theme_override_constants/separation = 35
+alignment = 1
+
+[node name="CancelButton" type="Button" parent="Panel/Padding/VBoxContainer/Buttons" unique_id=1002351696]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(150, 50)
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Cancel"
+
+[node name="JoinButton" type="Button" parent="Panel/Padding/VBoxContainer/Buttons" unique_id=932370663]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(150, 50)
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Join"
+
+[node name="ErrorLabel" type="Label" parent="Panel/Padding/VBoxContainer" unique_id=23758451]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+
+[connection signal="gui_input" from="Backdrop" to="." method="_on_backdrop_input"]
+[connection signal="text_changed" from="Panel/Padding/VBoxContainer/Settings/LobbyCodeInput" to="." method="_on_lobby_code_changed"]
+[connection signal="text_submitted" from="Panel/Padding/VBoxContainer/Settings/LobbyCodeInput" to="." method="_on_text_submitted"]
+[connection signal="pressed" from="Panel/Padding/VBoxContainer/Buttons/CancelButton" to="." method="_on_cancel_button_pressed"]
+[connection signal="pressed" from="Panel/Padding/VBoxContainer/Buttons/JoinButton" to="." method="_on_join_button_pressed"]
