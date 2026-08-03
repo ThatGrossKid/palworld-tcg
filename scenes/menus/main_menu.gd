@@ -7,6 +7,8 @@ func _ready() -> void:
 	$VBoxContainer/DuelRoomsButton.connect("button_up",_handle_duelroom_button)
 	$VBoxContainer/SettingsButton.connect("button_up",_handle_settings_button)
 	$VBoxContainer/TutorialButton.connect("button_up",_handle_tutorial_button)
+	#get_viewport().size_changed.connect(_update_position)
+	_update_position()
 func _exit_tree() -> void:
 	pass
 
@@ -25,3 +27,6 @@ func _handle_settings_button() -> void:
 	
 func _handle_exit_button() -> void:
 	get_tree().quit()
+func _update_position() -> void:
+	var viewport_size = get_viewport_rect().size
+	position = Vector2(viewport_size.x / 2, viewport_size.y)

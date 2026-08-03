@@ -1,5 +1,12 @@
 extends Node
 
+enum CardType {PAL, STRUCTURE, SOUL}
+enum Rarity {TD}
+enum SubType {}
+enum PalColor {RED, BLUE, GREEN, PURPLE, COLORLESS}
+
+
+
 const cards:Array =[
 	{
 		"CardNumber":"ESOUL-001",

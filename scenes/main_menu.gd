@@ -15,12 +15,12 @@ var _active_dialog: Control = null
 
 
 func _ready() -> void:
-	username_input.max_length = Network.MAX_USERNAME_LENGTH
-
-	Network.lobby_created.connect(_on_lobby_created)
-	Network.lobby_joined.connect(_on_lobby_joined)
-	Network.lobby_join_failed.connect(_on_lobby_join_failed)
-	Network.server_disconnected.connect(_on_server_disconnected)
+	#username_input.max_length = Network.MAX_USERNAME_LENGTH
+#
+	#Network.lobby_created.connect(_on_lobby_created)
+	#Network.lobby_joined.connect(_on_lobby_joined)
+	#Network.lobby_join_failed.connect(_on_lobby_join_failed)
+	#Network.server_disconnected.connect(_on_server_disconnected)
 
 	error_label.text = ""
 

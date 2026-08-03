@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://dqug52hyp8y07"]
+
+[ext_resource type="Script" uid="uid://c7mt6wn2r12v" path="res://title_screen.gd" id="1_tpml5"]
+[ext_resource type="Texture2D" uid="uid://poj7sjumntmy" path="res://assets/palworld_start_image.png" id="2_jqemp"]
+[ext_resource type="PackedScene" uid="uid://qlp2s0trjwra" path="res://scenes/menus/play_menu.tscn" id="3_013yr"]
+[ext_resource type="PackedScene" uid="uid://6orrq3d21rx0" path="res://scenes/menus/main_menu.tscn" id="4_8vmu4"]
+[ext_resource type="PackedScene" uid="uid://5gllo0fq6dnf" path="res://scenes/menus/pause_menu.tscn" id="5_xfn3p"]
+[ext_resource type="PackedScene" uid="uid://wfgup3jnn12y" path="res://scenes/menus/settings_menu.tscn" id="6_rhgbh"]
+
+[node name="TitleScreen" type="Node2D" unique_id=1432877875]
+script = ExtResource("1_tpml5")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1401497326]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -960.0
+offset_top = -540.0
+offset_right = 960.0
+offset_bottom = 540.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("2_jqemp")
+stretch_mode = 3
+
+[node name="MainMenu" parent="." unique_id=848787847 instance=ExtResource("4_8vmu4")]
+position = Vector2(-154, 77)
+
+[node name="PlayMenu" parent="." unique_id=1360819099 instance=ExtResource("3_013yr")]
+visible = false
+position = Vector2(46, 319)
+
+[node name="PauseMenu" parent="." unique_id=2118143860 instance=ExtResource("5_xfn3p")]
+visible = false
+
+[node name="SettingsMenu" parent="." unique_id=325776555 instance=ExtResource("6_rhgbh")]
+visible = false
+position = Vector2(716, 318)

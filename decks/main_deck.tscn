@@ -3,6 +3,9 @@
 [ext_resource type="Script" uid="uid://5cux6i7namiu" path="res://decks/main_deck.gd" id="1_i1yfj"]
 [ext_resource type="Texture2D" uid="uid://bnnf7leqmlc4r" path="res://textures/preview.webp" id="2_ipc68"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ipc68"]
+size = Vector2(179, 252)
+
 [node name="MainDeck" type="Node2D" unique_id=101529554]
 script = ExtResource("1_i1yfj")
 
@@ -32,7 +35,7 @@ layout_mode = 2
 [node name="ToolTipData" type="VBoxContainer" parent="DeckToolTip" unique_id=978585495]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="DeckToolTip/ToolTipData" unique_id=597535171]
+[node name="NumCards" type="Label" parent="DeckToolTip/ToolTipData" unique_id=597535171]
 layout_mode = 2
 
 [node name="Label2" type="Label" parent="DeckToolTip/ToolTipData" unique_id=1119607094]
@@ -43,3 +46,9 @@ layout_mode = 2
 
 [node name="Label4" type="Label" parent="DeckToolTip/ToolTipData" unique_id=804093174]
 layout_mode = 2
+
+[node name="MainDeckHoverArea" type="Area2D" parent="." unique_id=1988754437]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MainDeckHoverArea" unique_id=1828299584]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_ipc68")

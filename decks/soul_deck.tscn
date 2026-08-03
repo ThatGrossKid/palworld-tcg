@@ -3,43 +3,55 @@
 [ext_resource type="Script" uid="uid://b7gry6lxh1qbx" path="res://decks/soul_deck.gd" id="1_u2yhh"]
 [ext_resource type="Texture2D" uid="uid://bnnf7leqmlc4r" path="res://textures/preview.webp" id="2_rtgec"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6lpte"]
+size = Vector2(179, 252)
+
 [node name="SoulDeck" type="Node2D" unique_id=895344358]
 script = ExtResource("1_u2yhh")
 
 [node name="DeckImage" type="Sprite2D" parent="." unique_id=1419796502]
 texture = ExtResource("2_rtgec")
 
-[node name="DeckToolTip" type="HBoxContainer" parent="." unique_id=2132723377]
+[node name="SoulDeckToolTip" type="HBoxContainer" parent="." unique_id=2132723377]
 offset_right = 84.0
 offset_bottom = 104.0
 
-[node name="ToolTipLabel" type="VBoxContainer" parent="DeckToolTip" unique_id=344313864]
+[node name="ToolTipLabel" type="VBoxContainer" parent="SoulDeckToolTip" unique_id=344313864]
 layout_mode = 2
 
-[node name="NumCards" type="Label" parent="DeckToolTip/ToolTipLabel" unique_id=707828652]
-layout_mode = 2
-
-[node name="Label2" type="Label" parent="DeckToolTip/ToolTipLabel" unique_id=484159387]
+[node name="NumCards" type="Label" parent="SoulDeckToolTip/ToolTipLabel" unique_id=707828652]
 layout_mode = 2
 text = "# of Cards"
 
-[node name="Label3" type="Label" parent="DeckToolTip/ToolTipLabel" unique_id=465716617]
+[node name="Label2" type="Label" parent="SoulDeckToolTip/ToolTipLabel" unique_id=484159387]
 layout_mode = 2
 
-[node name="Label4" type="Label" parent="DeckToolTip/ToolTipLabel" unique_id=1822673507]
+[node name="Label3" type="Label" parent="SoulDeckToolTip/ToolTipLabel" unique_id=465716617]
 layout_mode = 2
 
-[node name="ToolTipData" type="VBoxContainer" parent="DeckToolTip" unique_id=875006687]
+[node name="Label4" type="Label" parent="SoulDeckToolTip/ToolTipLabel" unique_id=1822673507]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="DeckToolTip/ToolTipData" unique_id=192040121]
+[node name="ToolTipData" type="VBoxContainer" parent="SoulDeckToolTip" unique_id=875006687]
 layout_mode = 2
 
-[node name="Label2" type="Label" parent="DeckToolTip/ToolTipData" unique_id=326172150]
+[node name="Label" type="Label" parent="SoulDeckToolTip/ToolTipData" unique_id=192040121]
 layout_mode = 2
 
-[node name="Label3" type="Label" parent="DeckToolTip/ToolTipData" unique_id=878180120]
+[node name="Label2" type="Label" parent="SoulDeckToolTip/ToolTipData" unique_id=326172150]
 layout_mode = 2
 
-[node name="Label4" type="Label" parent="DeckToolTip/ToolTipData" unique_id=681135002]
+[node name="Label3" type="Label" parent="SoulDeckToolTip/ToolTipData" unique_id=878180120]
 layout_mode = 2
+
+[node name="Label4" type="Label" parent="SoulDeckToolTip/ToolTipData" unique_id=681135002]
+layout_mode = 2
+
+[node name="SoulDeckHoverArea" type="Area2D" parent="." unique_id=1067810181]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SoulDeckHoverArea" unique_id=1649253127]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_6lpte")
+
+[connection signal="tree_entered" from="." to="." method="_on_tree_entered"]
+[connection signal="tree_exited" from="." to="." method="_on_tree_exited"]

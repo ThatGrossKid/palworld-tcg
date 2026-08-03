@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://7ljv76uena3h"]
+
+[ext_resource type="Script" uid="uid://coe4uh8khvchg" path="res://card_description.gd" id="1_rdgr2"]
+
+[node name="CardDescription" type="Node2D" unique_id=144172868]
+script = ExtResource("1_rdgr2")
+
+[node name="DescriptionBox" type="VBoxContainer" parent="." unique_id=1945676971]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="CardName" type="Label" parent="DescriptionBox" unique_id=46150529]
+layout_mode = 2
+
+[node name="CardImage" type="Sprite2D" parent="DescriptionBox" unique_id=1683924593]
+
+[node name="InnerDescription" type="VBoxContainer" parent="DescriptionBox" unique_id=158613712]
+layout_mode = 2

@@ -1,13 +1,20 @@
 [gd_scene format=3 uid="uid://bd8k6onda0br0"]
 
 [ext_resource type="Script" uid="uid://bdtxgflomsbkg" path="res://players_field.gd" id="1_v01cv"]
-[ext_resource type="Texture2D" uid="uid://do8s2m8ub3j8h" path="res://textures/palworld_mat.png" id="2_ivc8e"]
+[ext_resource type="Texture2D" uid="uid://bj060aw22n8ri" path="res://assets/playmat.png" id="2_lh7wx"]
 [ext_resource type="PackedScene" uid="uid://c405blq8r00v5" path="res://card_manager.tscn" id="2_ny3hx"]
 [ext_resource type="PackedScene" uid="uid://cxhtjlru6q2u" path="res://soul_area.tscn" id="4_e4mvh"]
 [ext_resource type="PackedScene" uid="uid://b88mxi5ggbesn" path="res://decks/soul_deck.tscn" id="5_ct4a6"]
 [ext_resource type="PackedScene" uid="uid://dj2ev57vhofjm" path="res://decks/main_deck.tscn" id="6_lh7wx"]
 [ext_resource type="PackedScene" uid="uid://bvo2ohkxpevcf" path="res://graveyard.tscn" id="7_gy3u7"]
 [ext_resource type="PackedScene" uid="uid://dan0g6u613qob" path="res://exile_zone.tscn" id="8_lh7wx"]
+[ext_resource type="Script" uid="uid://d3h8wk4fmej2m" path="res://player_hand.gd" id="9_gy3u7"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6lpte"]
+radius = 16.03122
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6lpte"]
+size = Vector2(267, 207)
 
 [node name="PlayersField" type="Node2D" unique_id=1976571519]
 script = ExtResource("1_v01cv")
@@ -15,7 +22,7 @@ script = ExtResource("1_v01cv")
 [node name="TextureRect" type="TextureRect" parent="." unique_id=839493656]
 offset_right = 1920.0
 offset_bottom = 1080.0
-texture = ExtResource("2_ivc8e")
+texture = ExtResource("2_lh7wx")
 expand_mode = 1
 
 [node name="CardManager" parent="." unique_id=914953250 instance=ExtResource("2_ny3hx")]
@@ -24,13 +31,156 @@ expand_mode = 1
 position = Vector2(378, 507)
 
 [node name="SoulDeck" parent="." unique_id=895344358 instance=ExtResource("5_ct4a6")]
-position = Vector2(184, 937)
+position = Vector2(202, 826)
+scale = Vector2(1.5, 1.5)
 
 [node name="MainDeck" parent="." unique_id=101529554 instance=ExtResource("6_lh7wx")]
-position = Vector2(1672, 507)
+position = Vector2(1710, 519)
+scale = Vector2(1.2, 1.2)
 
 [node name="Graveyard" parent="." unique_id=933783972 instance=ExtResource("7_gy3u7")]
-position = Vector2(1736, 922)
+position = Vector2(1707, 904)
 
 [node name="ExileZone" parent="." unique_id=666065622 instance=ExtResource("8_lh7wx")]
-position = Vector2(1590, 176)
+position = Vector2(2029, 158)
+
+[node name="StandPhaseButton" type="Button" parent="." unique_id=208677593]
+unique_name_in_owner = true
+offset_left = 79.0
+offset_top = 134.0
+offset_right = 332.0
+offset_bottom = 179.0
+theme_override_font_sizes/font_size = 27
+text = "                                   "
+
+[node name="GameStateTracker" type="Line2D" parent="StandPhaseButton" unique_id=1064623686]
+position = Vector2(-80, -69)
+points = PackedVector2Array(79, 120, 79, 66, 335, 66, 335, 120)
+closed = true
+default_color = Color(0, 1, 1, 1)
+
+[node name="DrawPhaseButton" type="Button" parent="." unique_id=225535508]
+unique_name_in_owner = true
+offset_left = 79.0
+offset_top = 187.0
+offset_right = 332.0
+offset_bottom = 232.0
+theme_override_font_sizes/font_size = 27
+text = "                                   "
+
+[node name="GameStateTracker" type="Line2D" parent="DrawPhaseButton" unique_id=1916135847]
+position = Vector2(-80, -69)
+points = PackedVector2Array(79, 120, 79, 66, 335, 66, 335, 120)
+closed = true
+default_color = Color(0, 1, 1, 1)
+
+[node name="SoulPhaseButton" type="Button" parent="." unique_id=468380709]
+unique_name_in_owner = true
+offset_left = 80.0
+offset_top = 262.0
+offset_right = 333.0
+offset_bottom = 307.0
+theme_override_font_sizes/font_size = 27
+text = "                                   "
+
+[node name="GameStateTracker" type="Line2D" parent="SoulPhaseButton" unique_id=1076385015]
+position = Vector2(-80, -69)
+points = PackedVector2Array(79, 120, 79, 66, 335, 66, 335, 120)
+closed = true
+default_color = Color(0, 1, 1, 1)
+
+[node name="MainPhaseButton" type="Button" parent="." unique_id=1932981122]
+unique_name_in_owner = true
+offset_left = 80.0
+offset_top = 316.0
+offset_right = 333.0
+offset_bottom = 361.0
+theme_override_font_sizes/font_size = 27
+text = "                                   "
+
+[node name="GameStateTracker" type="Line2D" parent="MainPhaseButton" unique_id=1340221555]
+position = Vector2(-80, -69)
+points = PackedVector2Array(79, 120, 79, 66, 335, 66, 335, 120)
+closed = true
+default_color = Color(0, 1, 1, 1)
+
+[node name="LifeCounterTracker" type="Node2D" parent="." unique_id=2133502292]
+position = Vector2(1680, 179)
+
+[node name="LifeCounter0" type="Area2D" parent="LifeCounterTracker" unique_id=1469655816]
+position = Vector2(97, -47)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LifeCounterTracker/LifeCounter0" unique_id=21182822]
+shape = SubResource("CircleShape2D_6lpte")
+
+[node name="LifeCounter1" type="Area2D" parent="LifeCounterTracker" unique_id=2007469963]
+position = Vector2(99, -5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LifeCounterTracker/LifeCounter1" unique_id=1043937933]
+shape = SubResource("CircleShape2D_6lpte")
+
+[node name="LifeCounter2" type="Area2D" parent="LifeCounterTracker" unique_id=1497046639]
+position = Vector2(99, 37)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LifeCounterTracker/LifeCounter2" unique_id=1142489910]
+shape = SubResource("CircleShape2D_6lpte")
+
+[node name="LifeCounter3" type="Area2D" parent="LifeCounterTracker" unique_id=966813202]
+position = Vector2(98, 79)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LifeCounterTracker/LifeCounter3" unique_id=40669293]
+shape = SubResource("CircleShape2D_6lpte")
+
+[node name="LifeCounter4" type="Area2D" parent="LifeCounterTracker" unique_id=103480902]
+position = Vector2(60, 80)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LifeCounterTracker/LifeCounter4" unique_id=637449221]
+shape = SubResource("CircleShape2D_6lpte")
+
+[node name="LifeCounter5" type="Area2D" parent="LifeCounterTracker" unique_id=1655381127]
+position = Vector2(20, 80)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LifeCounterTracker/LifeCounter5" unique_id=423825277]
+shape = SubResource("CircleShape2D_6lpte")
+
+[node name="LifeCounter6" type="Area2D" parent="LifeCounterTracker" unique_id=1288444531]
+position = Vector2(-19, 80)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LifeCounterTracker/LifeCounter6" unique_id=519612266]
+shape = SubResource("CircleShape2D_6lpte")
+
+[node name="LifeCounter7" type="Area2D" parent="LifeCounterTracker" unique_id=173103099]
+position = Vector2(-58, 79)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LifeCounterTracker/LifeCounter7" unique_id=977307499]
+shape = SubResource("CircleShape2D_6lpte")
+
+[node name="LifeCounter8" type="Area2D" parent="LifeCounterTracker" unique_id=1791838313]
+position = Vector2(-97, 79)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LifeCounterTracker/LifeCounter8" unique_id=1373037402]
+shape = SubResource("CircleShape2D_6lpte")
+
+[node name="LifeCounter9" type="Area2D" parent="LifeCounterTracker" unique_id=761214286]
+position = Vector2(-97, 38)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LifeCounterTracker/LifeCounter9" unique_id=1680612945]
+shape = SubResource("CircleShape2D_6lpte")
+
+[node name="LifeCounter10" type="Area2D" parent="LifeCounterTracker" unique_id=1259194546]
+position = Vector2(-97, -5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LifeCounterTracker/LifeCounter10" unique_id=337535812]
+shape = SubResource("CircleShape2D_6lpte")
+
+[node name="LifeCounterTooltip" type="Area2D" parent="LifeCounterTracker" unique_id=334692056]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LifeCounterTracker/LifeCounterTooltip" unique_id=1967482428]
+position = Vector2(0.5, 15.5)
+shape = SubResource("RectangleShape2D_6lpte")
+
+[node name="PlayersHand" type="Node2D" parent="." unique_id=529076475]
+position = Vector2(600, 603)
+script = ExtResource("9_gy3u7")
+metadata/_custom_type_script = "uid://d3h8wk4fmej2m"
