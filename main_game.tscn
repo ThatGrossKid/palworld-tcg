@@ -7,8 +7,8 @@
 
 [node name="PVPBattle" parent="." unique_id=1014885011 instance=ExtResource("6_2pltu")]
 visible = false
-position = Vector2(0, 577)
+position = Vector2(4, 586)
 scale = Vector2(1.0041366, 0.5383348)
 
 [node name="TitleScreen" parent="." unique_id=1432877875 instance=ExtResource("2_yx7mw")]
-position = Vector2(960, 539)
+position = Vector2(0, 0)

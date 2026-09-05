@@ -3,12 +3,12 @@
 [ext_resource type="Script" uid="uid://bdtxgflomsbkg" path="res://players_field.gd" id="1_v01cv"]
 [ext_resource type="Texture2D" uid="uid://bj060aw22n8ri" path="res://assets/playmat.png" id="2_lh7wx"]
 [ext_resource type="PackedScene" uid="uid://c405blq8r00v5" path="res://card_manager.tscn" id="2_ny3hx"]
-[ext_resource type="PackedScene" uid="uid://cxhtjlru6q2u" path="res://soul_area.tscn" id="4_e4mvh"]
+[ext_resource type="PackedScene" uid="uid://cxhtjlru6q2u" path="res://zones/soul_area.tscn" id="4_e4mvh"]
 [ext_resource type="PackedScene" uid="uid://b88mxi5ggbesn" path="res://decks/soul_deck.tscn" id="5_ct4a6"]
 [ext_resource type="PackedScene" uid="uid://dj2ev57vhofjm" path="res://decks/main_deck.tscn" id="6_lh7wx"]
-[ext_resource type="PackedScene" uid="uid://bvo2ohkxpevcf" path="res://graveyard.tscn" id="7_gy3u7"]
-[ext_resource type="PackedScene" uid="uid://dan0g6u613qob" path="res://exile_zone.tscn" id="8_lh7wx"]
-[ext_resource type="Script" uid="uid://d3h8wk4fmej2m" path="res://player_hand.gd" id="9_gy3u7"]
+[ext_resource type="PackedScene" uid="uid://bvo2ohkxpevcf" path="res://zones/graveyard.tscn" id="7_gy3u7"]
+[ext_resource type="PackedScene" uid="uid://dan0g6u613qob" path="res://zones/exile_zone.tscn" id="8_lh7wx"]
+[ext_resource type="Script" uid="uid://d3h8wk4fmej2m" path="res://zones/player_hand.gd" id="9_gy3u7"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_6lpte"]
 radius = 16.03122

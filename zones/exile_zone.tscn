@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dan0g6u613qob"]
 
-[ext_resource type="Script" uid="uid://bh8ii62glsr22" path="res://exile_zone.gd" id="1_72vjt"]
+[ext_resource type="Script" uid="uid://bh8ii62glsr22" path="res://zones/exile_zone.gd" id="1_72vjt"]
 [ext_resource type="Texture2D" uid="uid://bux7e7arwsy35" path="res://textures/CardSlot.png" id="1_a3eht"]
 
 [node name="ExileZone" type="Node2D" unique_id=666065622]

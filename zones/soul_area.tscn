@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cxhtjlru6q2u"]
 
-[ext_resource type="Script" uid="uid://g3h00jyhs04j" path="res://soul_area.gd" id="1_y64ck"]
+[ext_resource type="Script" uid="uid://g3h00jyhs04j" path="res://zones/soul_area.gd" id="1_y64ck"]
 [ext_resource type="Texture2D" uid="uid://bux7e7arwsy35" path="res://textures/CardSlot.png" id="2_h8bss"]
 
 [node name="SoulArea" type="Node2D" unique_id=1326195384]

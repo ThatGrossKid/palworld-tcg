@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://c405blq8r00v5" path="res://card_manager.tscn" id="2_1aixi"]
 [ext_resource type="PackedScene" uid="uid://dlqk1xpqb5m3k" path="res://card_slot.tscn" id="3_6l7fl"]
 [ext_resource type="Script" uid="uid://1hkldm6g3bk3" path="res://card_slot.gd" id="4_guvfe"]
-[ext_resource type="Script" uid="uid://d3h8wk4fmej2m" path="res://player_hand.gd" id="5_usgql"]
+[ext_resource type="Script" uid="uid://d3h8wk4fmej2m" path="res://zones/player_hand.gd" id="5_usgql"]
 
 [node name="CardViewer" type="Node2D" unique_id=512503012]
 script = ExtResource("1_i7d5r")

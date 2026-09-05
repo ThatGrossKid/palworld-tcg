@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bvo2ohkxpevcf"]
 
 [ext_resource type="Texture2D" uid="uid://bux7e7arwsy35" path="res://textures/CardSlot.png" id="1_2jwxh"]
-[ext_resource type="Script" uid="uid://tqxuw2hxk3e7" path="res://graveyard.gd" id="1_siodt"]
+[ext_resource type="Script" uid="uid://tqxuw2hxk3e7" path="res://zones/graveyard.gd" id="1_siodt"]
 
 [node name="Graveyard" type="Node2D" unique_id=933783972]
 script = ExtResource("1_siodt")
